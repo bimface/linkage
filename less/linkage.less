@@ -3,9 +3,6 @@
   * {
     box-sizing: border-box;
   }
-  position: relative;
-  margin:20px;
-  box-shadow: 0 0 5px 0 #eee;
   &:after {
     content:".";
     display:block;
@@ -19,7 +16,7 @@
     width:200px;
     height: 100%;
     background-color: #fff;
-    z-index:3;
+    z-index:3
   }
   .main {
     position: relative;
@@ -50,7 +47,7 @@
     }
   }
   .drawing-list {
-    height:50%;
+    height: 50%;
     border-bottom:1px solid #ddd;
     .title {
       position: relative;
@@ -105,17 +102,21 @@
         }
       }
     }
-    .detail li {
-      height:30px;
-      line-height: 30px;
-      padding:0 10px 0 20px;
-      cursor: pointer;
-      &:hover {
-        background-color:#DDFFF7 ;
-      }
-      &.active {
-        color:#fff;
-        background-color:#11dab7;
+    .detail {
+      height: calc(~'100% - 42px');
+      overflow-y: auto;
+      li {
+        height:30px;
+        line-height: 30px;
+        padding:0 10px 0 20px;
+        cursor: pointer;
+        &:hover {
+          background-color:#DDFFF7 ;
+        }
+        &.active {
+          color:#fff;
+          background-color:#11dab7;
+        }
       }
     }
     .btn {
@@ -196,11 +197,11 @@
 .connectbtn {
   display:none;
   position: absolute;
-  bottom:-50px;
+  bottom: 0;
   left:0;
   width:100%;
   height:50px;
-  padding-top:9px;
+  line-height: 50px;
   border-top:1px solid #ddd;
   background-color:#fff;
   text-align:center;
@@ -238,6 +239,9 @@
   }
 }
 .step1,.step2,.step3 {
+  #view3d {
+    bottom: 50px;
+  }
   #view3d,#viewDwg {
     width:100%;
   }
@@ -269,7 +273,7 @@
   top:0;
   left:0;
   width:100%;
-  height:100%;
+  height: calc(~"100% - 50px");
   opacity:0;
   z-index:999;
 }
